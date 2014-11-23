@@ -1,0 +1,1152 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"line",
+				"linePart"
+			],
+			[
+				"Rand",
+				"RandomDirection"
+			],
+			[
+				"time",
+				"timeLastDirectionChange"
+			],
+			[
+				"dec",
+				"decoyPlayer"
+			],
+			[
+				"GameO",
+				"gameObject"
+			],
+			[
+				"tr",
+				"transform"
+			],
+			[
+				"fa",
+				"fakePlayer"
+			],
+			[
+				"GetCom",
+				"GetComponent	type"
+			],
+			[
+				"Create",
+				"CreateDecoyPlayer"
+			],
+			[
+				"pla",
+				"playerNum"
+			],
+			[
+				"fade",
+				"fadeOutSmoothness"
+			],
+			[
+				"fad",
+				"fadeOutSmoothness"
+			],
+			[
+				"shad",
+				"shadowStartAlpha"
+			],
+			[
+				"shadowF",
+				"shadowFadeoutSpeed"
+			],
+			[
+				"sha",
+				"shadow"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"GetCo",
+				"GetComponents	type"
+			],
+			[
+				"cur",
+				"tackleCurSpeed"
+			],
+			[
+				"has",
+				"hasBoost"
+			],
+			[
+				"min",
+				"minCameraSize"
+			],
+			[
+				"max",
+				"maxCameraSize"
+			],
+			[
+				"player",
+				"playerGO"
+			],
+			[
+				"Find",
+				"FindObjectOfType	type"
+			],
+			[
+				"coun",
+				"countdownParent"
+			],
+			[
+				"cou",
+				"countRemaining"
+			],
+			[
+				"par",
+				"parentGO"
+			],
+			[
+				"new",
+				"newRoundStartTime"
+			],
+			[
+				"StartCor",
+				"StartCoroutine	MonoBehaviour.*(routine)"
+			],
+			[
+				"Force",
+				"ForceForColl"
+			],
+			[
+				"last",
+				"lastPos"
+			],
+			[
+				"start",
+				"startColor"
+			],
+			[
+				"ma",
+				"maxScale"
+			],
+			[
+				"contro",
+				"controllerNum"
+			],
+			[
+				"plat",
+				"platformString"
+			],
+			[
+				"teamSc",
+				"teamScores"
+			],
+			[
+				"teamS",
+				"teamScoreText"
+			],
+			[
+				"tac",
+				"tackleInterrupted"
+			],
+			[
+				"tack",
+				"tackleInterrupted"
+			],
+			[
+				"tackl",
+				"tackle"
+			],
+			[
+				"Check",
+				"CheckPickup"
+			],
+			[
+				"carr",
+				"carrier"
+			],
+			[
+				"Vec",
+				"Vector2	x, y"
+			],
+			[
+				"score",
+				"scoreBoard"
+			],
+			[
+				"Ini",
+				"InitScoreText"
+			],
+			[
+				"teamSco",
+				"teamScoreText"
+			],
+			[
+				"tie",
+				"timeLimit"
+			],
+			[
+				"team",
+				"teamTimers"
+			],
+			[
+				"Sco",
+				"ScoreZone"
+			],
+			[
+				"OnTr",
+				"OnTriggerStay	other"
+			],
+			[
+				"Vect",
+				"Vector3	x, y, z"
+			],
+			[
+				"Controll",
+				"controllerNum"
+			],
+			[
+				"ta",
+				"tackling"
+			],
+			[
+				"bu",
+				"bulletGO"
+			],
+			[
+				"bull",
+				"bulletStart"
+			],
+			[
+				"sec",
+				"secondsSinceLastShot"
+			],
+			[
+				"se",
+				"secondsBetweenShots"
+			],
+			[
+				"Att",
+				"AttachNewCameraToPlayer"
+			],
+			[
+				"Camera",
+				"CameraRectForPlayerNum"
+			],
+			[
+				"size",
+				"sizeOfTeam"
+			],
+			[
+				"Cl",
+				"Clear	ParticleSystem"
+			],
+			[
+				"PRo",
+				"Projectile"
+			],
+			[
+				"Start",
+				"StartAiming"
+			],
+			[
+				"pr",
+				"projectile"
+			],
+			[
+				"Clamp",
+				"ClampMagnitude	vector, maxLength"
+			],
+			[
+				"Vecto",
+				"Vector3	x, y, z"
+			],
+			[
+				"proj",
+				"projDelta"
+			],
+			[
+				"veloci",
+				"velocityMult"
+			],
+			[
+				"game",
+				"gameObject"
+			],
+			[
+				"OnCo",
+				"OnCollisionStay	collision"
+			],
+			[
+				"dest",
+				"destPos"
+			],
+			[
+				"dis",
+				"distanceFromDest"
+			],
+			[
+				"distance",
+				"distanceFromStart"
+			],
+			[
+				"Move",
+				"MoveTo"
+			],
+			[
+				"Dist",
+				"DistanceFromDest"
+			],
+			[
+				"OnBec",
+				"OnBecameInvisible	void"
+			],
+			[
+				"coll",
+				"collisions"
+			],
+			[
+				"FindO",
+				"FindObjectOfType	type"
+			],
+			[
+				"OnColl",
+				"OnCollisionEnter	collision"
+			],
+			[
+				"call",
+				"callbackAlert"
+			],
+			[
+				"inter",
+				"interrupts"
+			],
+			[
+				"inte",
+				"interruptedSounds"
+			],
+			[
+				"GUITex",
+				"GUIText"
+			],
+			[
+				"sou",
+				"soundName"
+			],
+			[
+				"play",
+				"playingSounds"
+			],
+			[
+				"Play",
+				"PlaySound"
+			],
+			[
+				"pro",
+				"progressTo20"
+			],
+			[
+				"Pla",
+				"PlaySound"
+			],
+			[
+				"GetComp",
+				"GetComponent	type"
+			],
+			[
+				"source",
+				"sourceForName"
+			],
+			[
+				"check",
+				"checkSessionError"
+			],
+			[
+				"func",
+				"func_wrapper"
+			],
+			[
+				"def",
+				"defaultTemplateArgs"
+			],
+			[
+				"this",
+				"this_url"
+			],
+			[
+				"redi",
+				"redirect_url"
+			],
+			[
+				"gameSt",
+				"gameStartMelody"
+			],
+			[
+				"sc",
+				"scoreStr"
+			],
+			[
+				"print",
+				"printScore"
+			],
+			[
+				"simon",
+				"simonTones"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"pad",
+				"padding-left"
+			],
+			[
+				"wea",
+				"weapon"
+			],
+			[
+				"comp",
+				"compBlock"
+			],
+			[
+				"weap",
+				"Weapon"
+			],
+			[
+				"Load",
+				"LoadCustomLevel"
+			],
+			[
+				"Wor",
+				"WorldObjectsInRoom"
+			],
+			[
+				"GetKey",
+				"GetKeyDown"
+			],
+			[
+				"Ea",
+				"EagleMapTex"
+			],
+			[
+				"tri",
+				"triggers"
+			],
+			[
+				"ActivateRoom",
+				"ActivateRoomCharacters"
+			],
+			[
+				"pu",
+				"pushForce"
+			],
+			[
+				"old",
+				"oldTurnsSprite"
+			],
+			[
+				"Project",
+				"Projectile"
+			],
+			[
+				"OnT",
+				"OnTriggerEnter	other"
+			],
+			[
+				"Rang",
+				"RangEffect"
+			],
+			[
+				"weapo",
+				"weaponGUISelected"
+			],
+			[
+				"inve",
+				"inventoryIndexes"
+			],
+			[
+				"Invent",
+				"InventoryScreen"
+			],
+			[
+				"fire",
+				"fireFreqVariance"
+			],
+			[
+				"Fire",
+				"FireProjectile"
+			],
+			[
+				"Le",
+				"LeftKey"
+			],
+			[
+				"spri",
+				"spriteForKey"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"Upda",
+				"UpdateKeyStack"
+			],
+			[
+				"first",
+				"firstRoomMapPos"
+			],
+			[
+				"main",
+				"mainCam"
+			],
+			[
+				"Rep",
+				"RepeatStep"
+			],
+			[
+				"all",
+				"allowedDirections"
+			],
+			[
+				"OnTriggerEnter",
+				"OnTriggerEnter2D"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Assets/Scripts/Manager.cs",
+			"settings":
+			{
+				"buffer_size": 206,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Unity3D Build System/Unity.sublime-build",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"list ",
+				"Package Control: List Packages"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Preferences: Browse Packages"
+			],
+			[
+				"format",
+				"SublimeAStyleFormatter: Format Current File"
+			],
+			[
+				"list pa",
+				"Package Control: List Packages"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"form",
+				"CodeFormatter: Format Code"
+			],
+			[
+				"br",
+				"Preferences: Browse Packages"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 1191.0
+	},
+	"console":
+	{
+		"height": 244.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/josephconstan/Code/Unity/CTFUnity/Assets/Scripts/Shockwave.cs",
+		"/Users/josephconstan/Code/Unity/CTFUnity/Assets/Scripts/InputControl.cs",
+		"/Users/josephconstan/Code/Unity/CTFUnity/Assets/Scripts/Boost.cs",
+		"/Users/josephconstan/Code/Unity/CTFUnity/Assets/Scripts/SpawnPad.cs",
+		"/Users/josephconstan/Code/Unity/CTFUnity/Assets/Scripts/MainCamera.cs",
+		"/Users/josephconstan/Code/Unity/CTFUnity/Assets/Scripts/Turret.cs",
+		"/Users/josephconstan/Code/Unity/CTFUnity/Assets/Scripts/Fire.cs",
+		"/Users/josephconstan/Code/Unity/CTFUnity/Assets/Scripts/SmokeBomb.cs",
+		"/Users/josephconstan/Code/Unity/CTFUnity/Assets/Scripts/Bullet.cs",
+		"/Users/josephconstan/Code/Unity/CTFUnity/Assets/Scripts/DropItem.cs",
+		"/Users/josephconstan/Code/Unity/CTFUnity/Assets/Scripts/Player.cs",
+		"/Users/josephconstan/Code/Unity/CTFUnity/Assets/Scripts/Flag.cs",
+		"/Users/josephconstan/Code/Unity/CTFUnity/Assets/Scripts/Manager.cs",
+		"/Users/josephconstan/Code/Unity/CTFUnity/Assets/Scripts/ScoreZone.cs",
+		"/Users/josephconstan/.bash_aliases",
+		"/Users/josephconstan/Code/Unity/CTFUnity/Assets/Scripts/FollowCam.cs",
+		"/Users/josephconstan/Code/Unity/CTFUnity/ProjectSettings/InputManager.asset",
+		"/Users/josephconstan/Code/Unity/CTFUnity/Assets/_Scene1Natasja.unity",
+		"/Users/josephconstan/Code/Unity/CTFUnity/Assets/Manager.cs",
+		"/Users/josephconstan/Code/Unity/MissionDemolition/Assets/Editor/SnapToGrid.cs",
+		"/Users/josephconstan/Code/Unity/MissionDemolition/Assets/Scripts/FollowCam.cs",
+		"/Users/josephconstan/Code/Unity/MissionDemolition/Assets/Scripts/ProjectileLine.cs",
+		"/Users/josephconstan/Code/Unity/MissionDemolition/Assets/Scripts/UniduinoSetup.cs",
+		"/Users/josephconstan/Code/Unity/MissionDemolition/Assets/Uniduino/Editor/UniduinoSetup.cs",
+		"/Users/josephconstan/Code/Unity/MissionDemolition/Assets/Uniduino/Arduino.Firmata.cs",
+		"/Users/josephconstan/Code/Unity/MissionDemolition/Assets/Uniduino/UniduinoSetup.cs",
+		"/Users/josephconstan/Code/Unity/MissionDemolition/Assets/Uniduino/SerialPortProxy.cs",
+		"/Users/josephconstan/Code/Unity/MissionDemolition/Assets/Uniduino/Arduino.cs",
+		"/Users/josephconstan/Code/Unity/MissionDemolition/MissionDemolition.sln",
+		"/Users/josephconstan/Downloads/pcsx2ce-1.0.7/README.txt",
+		"/Users/josephconstan/Code/Unity/GamePrototype/Assets/Scripts/Start.cs",
+		"/Users/josephconstan/Code/Unity/ToolPrototype/Assets/Scripts/Extensions.cs",
+		"/Users/josephconstan/Code/Unity/ToolPrototype/Assets/Scripts/Button1.cs",
+		"/Users/josephconstan/Code/Unity/ToolPrototype/Assets/Scripts/BGMusicButton.cs",
+		"/Users/josephconstan/Code/Unity/ToolPrototype/Assets/Scripts/SimpleSoundButton.cs",
+		"/Users/josephconstan/Code/Unity/ToolPrototype/Assets/Scripts/InterruptingSoundButton.cs",
+		"/Users/josephconstan/.gitconfig",
+		"/Users/josephconstan/Code/494/ToolPrototype/Assets/Scripts/MultiDict.cs",
+		"/Users/josephconstan/Code/494/ToolPrototype/Assets/Scripts/Button1.cs",
+		"/Users/josephconstan/Code/485/p2/sftp-config.json",
+		"/Users/josephconstan/Code/485/p2/views/base.html",
+		"/Users/josephconstan/Code/485/p2/app.py",
+		"/Users/josephconstan/Code/485/p2/views/pic.html",
+		"/Users/josephconstan/Code/485/p2/views/index.html",
+		"/Users/josephconstan/Code/485/p2/views/albums.html",
+		"/Users/josephconstan/Code/485/p2/controllers/pic.py",
+		"/Users/josephconstan/Code/Arduino/LCD/lcd.ino",
+		"/Users/josephconstan/Code/Arduino/Keyboard_Piano/pitches.h",
+		"/Users/josephconstan/Desktop/zelda.html",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/BlockInRoom_B4.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/Boomerang.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/BombPup.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/BoomerangPup.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/BowPup.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/HammerPup.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/BladeTrap.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/Rupee.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/Enemy.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/Character.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/LockedDoor.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/Link.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/Explosion.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/HeartPup.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/Key.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/Dragon.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/TriforcePiece.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/Minimap.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/Extensions.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/InventoryScreen.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/GameOver.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/CompassOverlay.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/HUD.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/KeyConfig.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/Goriya.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/GridEnemy.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/Bomb.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/Peg.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/Hammer.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/Staircase.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/BlockedDoor.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/Sword.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/Gel.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/Weapon.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/Keese.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/Fireball.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/Projectile.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/InventorySelector.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/FlyingSword.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/MainCamera.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/AudioManager.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/Room_B4.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/BigHeart.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/Heart.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/MapPup.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/CompassPup.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/MovableBlock.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/Stalfos.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/Room.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Prefabs/Resources/MapPup.prefab",
+		"/Users/josephconstan/Code/LegendOfZelda/enemyAI.txt",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/Block.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/Pickup.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Editor/SnapToGrid.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/BombPickup.cs",
+		"/Users/josephconstan/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/ImmovableBlock.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/WorldObject.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scripts/Main.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Scenes/Eagle.unity",
+		"/Users/josephconstan/.bashrc",
+		"/Users/josephconstan/Code/Farmlogs/.gitignore",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Prefabs/Resources/Link.prefab",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Sword.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/FlyingSword.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Weapon.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/KeyConfig.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Character.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/Utility.cs",
+		"/Users/josephconstan/Code/485/p1/.gitignore",
+		"/Users/josephconstan/Library/Application Support/Sublime Text 2/Packages/Alignment/Base File.sublime-settings",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/enemyAI.txt",
+		"/Users/josephconstan/Code/LegendOfZelda/Assets/ZeldaObject.cs",
+		"/Users/josephconstan/Code/LegendOfZelda/todoOrder.txt",
+		"/Users/josephconstan/Documents/Arduino/Simon/Simon.ino",
+		"/Users/josephconstan/Code/Arduino/Simon/simon.c",
+		"/Users/josephconstan/Code/twilio-client-server/a",
+		"/Users/josephconstan/Code/twilio-client-server/secrets.txt",
+		"/Users/josephconstan/Documents/School/Old/eecs388/HW2/crackvigenere.py"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"",
+			"/Users/josephconstan/Code/485/p2/views,/Users/josephconstan/Code/485/p2/controllers",
+			"/Users/josephconstan/Code/LegendOfZelda/Assets",
+			"",
+			"<open files>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"points",
+			"startTime",
+			"fakePlayer.inputCtrl",
+			"localScale",
+			"randomDirection",
+			"public",
+			"new",
+			"public",
+			"InputControl.S",
+			"CreateDecoyPlayer",
+			"string",
+			"ControllerForPlayer",
+			"playerNum",
+			"controllerNum",
+			"lastInputVelocity",
+			"SubManaCost",
+			"manaCost",
+			"TryDrop",
+			"WasDroppedByPlayer",
+			"WasDroppedByPlay",
+			"WasDroppedByPlayer",
+			"WasDropped",
+			"go",
+			"Invoke",
+			"Invoke(\"Des",
+			"burstDuration",
+			"frozen",
+			"1f",
+			"mainCamera",
+			"mainC",
+			"DidScore",
+			"true",
+			"KillPlayer",
+			"0.5f",
+			"ManaTime",
+			"DeltaMana",
+			"public",
+			"newRoundStartTime",
+			"OnTrigger",
+			"IsKinematic",
+			"isKinematic",
+			"flag",
+			"toPlayer",
+			"p.flag",
+			"Drop(",
+			"Drop()",
+			"Drop",
+			"tackleInterrupted",
+			"2",
+			"last",
+			"2",
+			"maxScale",
+			"index",
+			":",
+			"tackleCurSpeed",
+			"carrying",
+			"flag",
+			"carrying",
+			"velocity",
+			"Debug.Log(",
+			"Debug",
+			"PlayerCamera",
+			"const",
+			"public",
+			"teams",
+			"3",
+			"p",
+			"timer",
+			"Vector2",
+			"3",
+			"InitEdge",
+			"Debug.Log",
+			"Debug",
+			"DrawEdge",
+			"InitLine",
+			"lossy",
+			"x",
+			"float",
+			"=",
+			"Raw",
+			"tackleSpeed",
+			"tackleForce",
+			"tackleSpeed",
+			"tackleDirection",
+			"tackleIntensity",
+			"L",
+			"speed",
+			"DropStep",
+			"OnTriggerEnter",
+			"GameObject",
+			"=",
+			"toTarget",
+			"name",
+			"color",
+			"index",
+			"num",
+			"players",
+			"AttachCameraToPlayer",
+			"CreateCameraForPlayer",
+			"go",
+			"color",
+			"Color",
+			"color",
+			"sizeForTeam",
+			"safe",
+			"Instantiate",
+			"public",
+			"Clear()",
+			"Clear",
+			"pTemp",
+			"NextLevel",
+			"StartLevel",
+			"SwitchView",
+			"destination",
+			"void",
+			"= =",
+			"    void",
+			"void",
+			"//",
+			"\" ",
+			"(\" ",
+			"static",
+			"public",
+			":",
+			";",
+			"{",
+			"}",
+			";"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Die",
+			"==",
+			"protected new void Update",
+			"protected new void FixedUpdate",
+			"override void FixedUpdate",
+			"public override void Update",
+			"public new void Update",
+			"Extensions.random.NextDouble()",
+			"System.Random.NextDouble()",
+			"System.Random.Sample()",
+			"System.Random",
+			"DLOG($1\");",
+			"cout << $1 << endl;",
+			"DLOG($1);",
+			"fileInodeBlockLoc",
+			"dirBlockLoc",
+			"loopValidDirEntries",
+			"RAMFile",
+			"FileServer",
+			"train-$1 SENT-START $2 SENT-END",
+			"hmm7",
+			"hmm8",
+			"hmm9",
+			"hmm10",
+			"hmm11",
+			"hmm12",
+			"hmm13",
+			"hmm2",
+			"hmm1",
+			"pid",
+			"pager->",
+			"vPages",
+			"ppn",
+			"vpn",
+			"ppn",
+			"vpn",
+			"zeroed",
+			"",
+			"mytest-$1",
+			"",
+			"mytrain-$1",
+			"[$3, $2, $1]",
+			"*",
+			"long",
+			"CID",
+			"IMP(this)->curContext",
+			"ucontext_t* volatile ",
+			"ucontext_t* volatile",
+			"ucontext_t* volatile ",
+			"ucontext_t* volatile",
+			"ucontext_t* volatile ",
+			"IMPL",
+			"DLOG($1)",
+			"DLOG(.*?)",
+			"DLOG($1);",
+			"IMPL",
+			"IMP($1)",
+			"\"description\"",
+			"\"name\"",
+			"name\"",
+			"\"tid\"",
+			"nefarious login",
+			"nefarious logout",
+			"11/",
+			";\n",
+			"'",
+			"\n",
+			"'",
+			"curIdx",
+			"",
+			"</string>",
+			"",
+			"</item>\n	<item>",
+			"</key>\n\n	</item>",
+			"</key>\n		<string>",
+			">\n<item>\n		<key>",
+			">\n<",
+			"<string>",
+			"</string>",
+			"</key>",
+			"<key>",
+			"Joseph Constantakis",
+			"bestPath",
+			"n->",
+			"child->",
+			"partial->",
+			"root->",
+			"weight",
+			"bestSoFar",
+			"partial.",
+			"partial->",
+			"child",
+			"partial",
+			"minEdges",
+			"j",
+			"numNodes",
+			"j",
+			"nodes.size()",
+			"visited",
+			"curNode",
+			"innies",
+			"state->",
+			"*state",
+			"cache.data",
+			"cache.tags",
+			"cache",
+			"instr",
+			"",
+			",",
+			"}}",
+			"{{",
+			"->",
+			"",
+			"1",
+			"",
+			"->",
+			"o->",
+			"newOrder->",
+			"->",
+			"*",
+			"->",
+			"map",
+			"RandInfo",
+			"SettingsStruct",
+			"Order",
+			"info",
+			"state.instrReg",
+			"state.mem[state.pc] >> 22"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Assets/Scripts/Manager.cs",
+					"settings":
+					{
+						"buffer_size": 206,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.Simon":
+	{
+		"height": 183.0
+	},
+	"output.buttonCount":
+	{
+		"height": 124.0
+	},
+	"output.exec":
+	{
+		"height": 212.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 350.0
+	},
+	"output.stino_log":
+	{
+		"height": 124.0
+	},
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 181.0,
+	"status_bar_visible": true
+}
