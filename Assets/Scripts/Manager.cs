@@ -31,17 +31,18 @@ public class Manager : MonoBehaviour
         balls = Enumerable.Range(0, numBalls)
                           .Select(i => {
             float rad = ((float)i)/((float)numBalls) * 2f*Mathf.PI;
-            Vector3 pos = new Vector3(Mathf.Sin(rad), 0, Mathf.Cos(rad)) * (groundRadius-1);
+            Vector3 pos = new Vector3(Mathf.Sin(rad), 1f, Mathf.Cos(rad)) * (groundRadius-1);
             return CreateBall(pos, i);
         })
         .ToList();
     }
 
-    Ball CreateBall(Vector3 pos, int index)
+    Ball CreateBall(Vector3 pos, int number)
     {
         GameObject go = Instantiate(Resources.Load("Ball"), pos, Quaternion.identity) as GameObject;
-        go.renderer.material.color = colorOfBall[index];
+        go.renderer.material.color = colorOfBall[number];
         Ball ball = go.GetComponent<Ball>();
+        ball.number = number;
         return ball;
     }
 }

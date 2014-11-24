@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"Create",
+				"CreateBalls"
+			],
+			[
+				"grou",
+				"groundRadius"
+			],
+			[
+				"GetC",
+				"GetComponent	type"
+			],
+			[
+				"color",
+				"colorOfBall"
+			],
+			[
 				"line",
 				"linePart"
 			],
@@ -34,10 +50,6 @@
 			[
 				"GetCom",
 				"GetComponent	type"
-			],
-			[
-				"Create",
-				"CreateDecoyPlayer"
 			],
 			[
 				"pla",
@@ -502,31 +514,11 @@
 			[
 				"main",
 				"mainCam"
-			],
-			[
-				"Rep",
-				"RepeatStep"
-			],
-			[
-				"all",
-				"allowedDirections"
-			],
-			[
-				"OnTriggerEnter",
-				"OnTriggerEnter2D"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "Assets/Scripts/Manager.cs",
-			"settings":
-			{
-				"buffer_size": 206,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Packages/Unity3D Build System/Unity.sublime-build",
 	"command_palette":
@@ -609,6 +601,7 @@
 	"file_history":
 	[
 		"/Users/josephconstan/Code/Unity/CTFUnity/Assets/Scripts/Shockwave.cs",
+		"/Users/josephconstan/Code/Balance/Assets/Scripts/Manager.cs",
 		"/Users/josephconstan/Code/Unity/CTFUnity/Assets/Scripts/InputControl.cs",
 		"/Users/josephconstan/Code/Unity/CTFUnity/Assets/Scripts/Boost.cs",
 		"/Users/josephconstan/Code/Unity/CTFUnity/Assets/Scripts/SpawnPad.cs",
@@ -734,8 +727,7 @@
 		"/Users/josephconstan/Documents/Arduino/Simon/Simon.ino",
 		"/Users/josephconstan/Code/Arduino/Simon/simon.c",
 		"/Users/josephconstan/Code/twilio-client-server/a",
-		"/Users/josephconstan/Code/twilio-client-server/secrets.txt",
-		"/Users/josephconstan/Documents/School/Old/eecs388/HW2/crackvigenere.py"
+		"/Users/josephconstan/Code/twilio-client-server/secrets.txt"
 	],
 	"find":
 	{
@@ -1032,38 +1024,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "Assets/Scripts/Manager.cs",
-					"settings":
-					{
-						"buffer_size": 206,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1108,7 +1070,7 @@
 	},
 	"output.exec":
 	{
-		"height": 212.0
+		"height": 177.0
 	},
 	"output.find_results":
 	{
