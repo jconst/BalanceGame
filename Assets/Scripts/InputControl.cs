@@ -16,8 +16,9 @@ public class InputControl
     }
 
     const int keyboardPlayer = 0;
+    Vector3 tilt = Vector3.zero;
 
-    public virtual Vector3 RollVelocity(int playerNum)
+    public Vector3 RollVelocity(int playerNum)
     {
         Vector3 velocity = Vector3.zero;
 
@@ -27,6 +28,15 @@ public class InputControl
                                    0,
                                    Input.GetAxisRaw("Vertical"));
         }
-        return velocity * 10f;
+        return velocity * 12f;
     }
+
+    public Vector3 Tilt()
+    {
+        Vector3 newTilt = new Vector3(Input.GetAxisRaw("TiltForward"),
+                                      0,
+                                      -Input.GetAxisRaw("TiltRight"));
+        tilt = Vector3.Lerp(tilt, newTilt, 0.2f);
+        return tilt;
+    } 
 }

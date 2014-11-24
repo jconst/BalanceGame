@@ -14,4 +14,8 @@ public class Ball : MonoBehaviour
     void FixedUpdate() {
         rigidbody.AddForce(InputControl.S.RollVelocity(number));
     }
+
+    void OnBecameInvisible() {
+        Destroy(gameObject);
+    }
 }
