@@ -6,13 +6,15 @@ using System.Linq;
 public class Ball : MonoBehaviour
 {
     public int number;
+    public bool frozen;
 
     void Start() {
     
     }
     
     void FixedUpdate() {
-        rigidbody.AddForce(InputControl.S.RollVelocity(number));
+        if (!frozen)
+            rigidbody.AddForce(InputControl.S.RollVelocity(number));
     }
 
     void OnBecameInvisible() {

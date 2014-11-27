@@ -16,7 +16,12 @@ public class InputControl
     }
 
     const int keyboardPlayer = 0;
+    SerialParser serial;
     Vector3 tilt = Vector3.zero;
+
+    public InputControl() {
+        serial = new SerialParser(SerialParser.guessPortName());
+    }
 
     public Vector3 RollVelocity(int playerNum)
     {
@@ -33,6 +38,7 @@ public class InputControl
 
     public Vector3 Tilt()
     {
+        Debug.Log(serial.Read());
         Vector3 newTilt = new Vector3(Input.GetAxisRaw("TiltForward"),
                                       0,
                                       -Input.GetAxisRaw("TiltRight"));

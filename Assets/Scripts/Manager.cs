@@ -7,6 +7,7 @@ public class Manager : MonoBehaviour
 {
     // -- CONSTANTS --
     const int numBalls = 3;
+    const int countdownLength = 3;
 
     private Dictionary<int, Color> colorOfBall =
         new Dictionary<int, Color>
@@ -20,9 +21,18 @@ public class Manager : MonoBehaviour
     public GameObject ground;
     public List<Ball> balls;
 
+    public float roundStartTime;
+    public GUIText countdownGUIText;
+
+    public bool countingDown {
+        get {
+            return (countdownLength - (Time.time - roundStartTime)) > -1;
+        }
+    }
+
     void Start()
     {
-        CreateBalls();
+        StartNewRound();
     }
 
     void CreateBalls()
@@ -44,5 +54,37 @@ public class Manager : MonoBehaviour
         Ball ball = go.GetComponent<Ball>();
         ball.number = number;
         return ball;
+    }
+
+    public void StartNewRound()
+    {
+        balls.ForEach(Destroy);
+        roundStartTime = Time.time;
+        CreateBalls();
+        balls.ForEach(b => {
+            b.frozen = true;
+        });
+
+        StartCoroutine(CountDownCoroutine());
+    }
+
+    public IEnumerator CountDownCoroutine()
+    {
+        GameObject countdownParent = Instantiate(Resources.Load("Countdown")) as GameObject;
+        countdownGUIText = countdownParent.GetComponentInChildren<GUIText>();
+
+        yield return new WaitForSeconds(countdownLength);
+        balls.ForEach(b => b.frozen = false);
+
+        yield return new WaitForSeconds(1);
+
+        Destroy(countdownParent);
+    }
+
+    public void Update() {
+        if (countingDown) {
+            int countRemaining = countdownLength - (int)Mathf.Floor(Time.time - roundStartTime);
+            countdownGUIText.text = countRemaining > 0 ? countRemaining.ToString() : "Start!";
+        }
     }
 }
