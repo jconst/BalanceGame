@@ -5,15 +5,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.IO.Ports;
 
-public class SerialParser
+public class SerialParser : MonoBehaviour
 {
     const int maxLinesPerBatch = 64; // process no more than this many bytes per individual processInput call
     const int baudRate = 57600;
     SerialPort _serialPort;
 
     string message;
+    public List<Vector3> ballVelocity =
+       new List<Vector3> {
+        Vector3.zero,
+        Vector3.zero,
+        Vector3.zero
+    };
 
-    public static string guessPortName()
+    public static string GuessPortName()
     {           
         var devices = System.IO.Ports.SerialPort.GetPortNames();
         
@@ -31,16 +37,16 @@ public class SerialParser
                 break;
             }
         }       
-        return dev;     
+        return dev;
     }
 
-    public SerialParser(string serialPortName) {
+    void Start() {
+        string serialPortName = GuessPortName();
         Debug.Log(serialPortName);
         _serialPort = new SerialPort(serialPortName, baudRate);
-        //_serialPort = Win32SerialPort.CreateInstance();
         
-        _serialPort.DtrEnable = true; // win32 hack to try to get DataReceived event to fire
-        _serialPort.RtsEnable = true; 
+        // _serialPort.DtrEnable = true; // win32 hack to try to get DataReceived event to fire
+        // _serialPort.RtsEnable = true; 
         _serialPort.PortName = serialPortName;
         _serialPort.BaudRate = baudRate;
         
@@ -53,20 +59,47 @@ public class SerialParser
         _serialPort.Open();
     }
 
-    public string Read() {
-        for (int i=0; i<maxLinesPerBatch; ++i) {
+    void FixedUpdate() {
+        Read();
+        Parse();
+    }
+
+    void Read() {
+        // for (int i=0; i<maxLinesPerBatch; ++i) {
             if (_serialPort.BytesToRead > 0) {
                 try {
                     message = _serialPort.ReadLine();
                 } catch (Exception e) {
                      // swallow read timeout exceptions
                     if (e.GetType() == typeof(TimeoutException))
-                        return message;
+                        return;
                     else 
                         throw;
                 }
             }
+        // }
+    }
+
+    void Parse() {
+        if (!message.StartsWith(":"))
+            return;
+
+        string[] tokens = message.Split(null);
+        string msgType = tokens[0];
+        if (msgType.StartsWith(":m")) {
+            // :m0 status x z
+            int mouseNum = Int32.Parse(msgType.Substring(2,1));
+            int stat = Int32.Parse(tokens[1]);
+            int x = Int32.Parse(tokens[2]);
+            int z = Int32.Parse(tokens[3]);
+
+            bool jumping = (stat & 1) != 0;
+            ballVelocity[mouseNum] = new Vector3((float)x / 8, jumping ? 1 : 0, (float)z / 8);
         }
-        return message;
+    }
+
+    void OnDestroy()
+    {               
+        _serialPort.Close();
     }
 }

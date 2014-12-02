@@ -20,12 +20,12 @@ public class InputControl
     Vector3 tilt = Vector3.zero;
 
     public InputControl() {
-        serial = new SerialParser(SerialParser.guessPortName());
+        serial = GameObject.FindObjectOfType(typeof(SerialParser)) as SerialParser;
     }
 
     public Vector3 RollVelocity(int playerNum)
     {
-        Vector3 velocity = Vector3.zero;
+        Vector3 velocity = serial.ballVelocity[playerNum];
 
         //allow a player to be controlled by keyboard for testing:
         if (playerNum == keyboardPlayer && velocity.magnitude < 0.2f) {
@@ -38,7 +38,6 @@ public class InputControl
 
     public Vector3 Tilt()
     {
-        Debug.Log(serial.Read());
         Vector3 newTilt = new Vector3(Input.GetAxisRaw("TiltForward"),
                                       0,
                                       -Input.GetAxisRaw("TiltRight"));

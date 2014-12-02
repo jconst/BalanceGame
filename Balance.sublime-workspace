@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"De",
+				"Debug"
+			],
+			[
+				"Serial",
+				"SerialPort"
+			],
+			[
 				"Create",
 				"CreateBalls"
 			],
@@ -506,14 +514,6 @@
 			[
 				"Upda",
 				"UpdateKeyStack"
-			],
-			[
-				"first",
-				"firstRoomMapPos"
-			],
-			[
-				"main",
-				"mainCam"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "Assets/Scripts/InputControl.cs",
 			"settings":
 			{
-				"buffer_size": 1152,
+				"buffer_size": 1311,
 				"line_ending": "Unix"
 			}
 		},
@@ -532,14 +532,6 @@
 			"settings":
 			{
 				"buffer_size": 241,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Assets/Scripts/DontGoThroughThings.cs",
-			"settings":
-			{
-				"buffer_size": 1481,
 				"line_ending": "Unix"
 			}
 		},
@@ -556,6 +548,14 @@
 			"settings":
 			{
 				"buffer_size": 408,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/SerialParser.cs",
+			"settings":
+			{
+				"buffer_size": 2215,
 				"line_ending": "Unix"
 			}
 		}
@@ -640,6 +640,8 @@
 	},
 	"file_history":
 	[
+		"/Users/josephconstan/Desktop/Transcript.html",
+		"/Users/josephconstan/Code/Balance/Assets/Scripts/DontGoThroughThings.cs",
 		"/Users/josephconstan/Code/Unity/CTFUnity/Assets/Scripts/Manager.cs",
 		"/Users/josephconstan/Code/Unity/CTFUnity/Assets/Scripts/Shockwave.cs",
 		"/Users/josephconstan/Code/Balance/Assets/Scripts/Manager.cs",
@@ -765,9 +767,7 @@
 		"/Users/josephconstan/Code/LegendOfZelda/Assets/ZeldaObject.cs",
 		"/Users/josephconstan/Code/LegendOfZelda/todoOrder.txt",
 		"/Users/josephconstan/Documents/Arduino/Simon/Simon.ino",
-		"/Users/josephconstan/Code/Arduino/Simon/simon.c",
-		"/Users/josephconstan/Code/twilio-client-server/a",
-		"/Users/josephconstan/Code/twilio-client-server/secrets.txt"
+		"/Users/josephconstan/Code/Arduino/Simon/simon.c"
 	],
 	"find":
 	{
@@ -1064,7 +1064,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -1072,15 +1072,15 @@
 					"file": "Assets/Scripts/InputControl.cs",
 					"settings":
 					{
-						"buffer_size": 1152,
+						"buffer_size": 1311,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1118,
-								1118
+								581,
+								581
 							]
 						],
 						"settings":
@@ -1093,7 +1093,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 48.0,
+						"translation.y": 23.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1129,35 +1129,6 @@
 				},
 				{
 					"buffer": 2,
-					"file": "Assets/Scripts/DontGoThroughThings.cs",
-					"settings":
-					{
-						"buffer_size": 1481,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								200,
-								200
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "Assets/Scripts/Manager.cs",
 					"settings":
 					{
@@ -1188,7 +1159,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "Assets/Scripts/Ball.cs",
 					"settings":
 					{
@@ -1208,10 +1179,43 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Assets/Scripts/SerialParser.cs",
+					"settings":
+					{
+						"buffer_size": 2215,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1676,
+								1676
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 441.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
