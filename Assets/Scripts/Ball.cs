@@ -10,6 +10,7 @@ public class Ball : MonoBehaviour
     public int number;
     public bool frozen;
     public bool airborne = true;
+    public bool dead = false;
 
     void Start() {
     
@@ -38,7 +39,8 @@ public class Ball : MonoBehaviour
     }
 
     void OnBecameInvisible() {
-        Destroy(gameObject);
+        dead = false;
+        // Destroy(gameObject);
     }
 
     void OnCollisionEnter(Collision coll) {

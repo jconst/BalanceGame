@@ -36,12 +36,15 @@ public class InputControl
         return velocity * 12f;
     }
 
-    public Vector3 Tilt()
+    public Quaternion Tilt()
     {
+        if (serial.groundRotation != Quaternion.identity) {
+            return serial.groundRotation;// * Quaternion.Euler(0,0,0);
+        }
         Vector3 newTilt = new Vector3(Input.GetAxisRaw("TiltForward"),
                                       0,
                                       -Input.GetAxisRaw("TiltRight"));
         tilt = Vector3.Lerp(tilt, newTilt, 0.2f);
-        return tilt;
+        return Quaternion.Euler(tilt * 20f);;
     } 
 }

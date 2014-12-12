@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"Star",
+				"StartsWith"
+			],
+			[
+				"OnCo",
+				"OnCollisionStay	collision"
+			],
+			[
+				"On",
+				"OnCollisionEnter	collision"
+			],
+			[
+				"try",
+				"tryParse"
+			],
+			[
 				"De",
 				"Debug"
 			],
@@ -296,10 +312,6 @@
 				"gameObject"
 			],
 			[
-				"OnCo",
-				"OnCollisionStay	collision"
-			],
-			[
 				"dest",
 				"destPos"
 			],
@@ -502,18 +514,6 @@
 			[
 				"Le",
 				"LeftKey"
-			],
-			[
-				"spri",
-				"spriteForKey"
-			],
-			[
-				"pos",
-				"position"
-			],
-			[
-				"Upda",
-				"UpdateKeyStack"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "Assets/Scripts/InputControl.cs",
 			"settings":
 			{
-				"buffer_size": 1311,
+				"buffer_size": 1483,
 				"line_ending": "Unix"
 			}
 		},
@@ -531,7 +531,7 @@
 			"file": "Assets/Scripts/Ground.cs",
 			"settings":
 			{
-				"buffer_size": 241,
+				"buffer_size": 217,
 				"line_ending": "Unix"
 			}
 		},
@@ -547,7 +547,7 @@
 			"file": "Assets/Scripts/Ball.cs",
 			"settings":
 			{
-				"buffer_size": 408,
+				"buffer_size": 1215,
 				"line_ending": "Unix"
 			}
 		},
@@ -555,7 +555,7 @@
 			"file": "Assets/Scripts/SerialParser.cs",
 			"settings":
 			{
-				"buffer_size": 2215,
+				"buffer_size": 3323,
 				"line_ending": "Unix"
 			}
 		}
@@ -640,6 +640,7 @@
 	},
 	"file_history":
 	[
+		"/Users/josephconstan/Code/Farmlogs/FarmLogs/Podfile",
 		"/Users/josephconstan/Desktop/Transcript.html",
 		"/Users/josephconstan/Code/Balance/Assets/Scripts/DontGoThroughThings.cs",
 		"/Users/josephconstan/Code/Unity/CTFUnity/Assets/Scripts/Manager.cs",
@@ -766,8 +767,7 @@
 		"/Users/josephconstan/Code/LegendOfZelda/Assets/enemyAI.txt",
 		"/Users/josephconstan/Code/LegendOfZelda/Assets/ZeldaObject.cs",
 		"/Users/josephconstan/Code/LegendOfZelda/todoOrder.txt",
-		"/Users/josephconstan/Documents/Arduino/Simon/Simon.ino",
-		"/Users/josephconstan/Code/Arduino/Simon/simon.c"
+		"/Users/josephconstan/Documents/Arduino/Simon/Simon.ino"
 	],
 	"find":
 	{
@@ -791,6 +791,9 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"canJump",
+			"64",
+			"Vector2",
 			"NewRoundCoroutine",
 			"p",
 			"allPlayers",
@@ -915,10 +918,7 @@
 			"void",
 			"//",
 			"\" ",
-			"(\" ",
-			"static",
-			"public",
-			":"
+			"(\" "
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1064,7 +1064,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -1072,15 +1072,15 @@
 					"file": "Assets/Scripts/InputControl.cs",
 					"settings":
 					{
-						"buffer_size": 1311,
+						"buffer_size": 1483,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								581,
-								581
+								1157,
+								1157
 							]
 						],
 						"settings":
@@ -1093,7 +1093,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 23.0,
+						"translation.y": 201.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1103,15 +1103,15 @@
 					"file": "Assets/Scripts/Ground.cs",
 					"settings":
 					{
-						"buffer_size": 241,
+						"buffer_size": 217,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								241,
-								241
+								208,
+								208
 							]
 						],
 						"settings":
@@ -1153,7 +1153,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 961.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1163,15 +1163,15 @@
 					"file": "Assets/Scripts/Ball.cs",
 					"settings":
 					{
-						"buffer_size": 408,
+						"buffer_size": 1215,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								263,
-								263
+								1205,
+								1205
 							]
 						],
 						"settings":
@@ -1194,15 +1194,15 @@
 					"file": "Assets/Scripts/SerialParser.cs",
 					"settings":
 					{
-						"buffer_size": 2215,
+						"buffer_size": 3323,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1676,
-								1676
+								3202,
+								3202
 							]
 						],
 						"settings":
@@ -1215,7 +1215,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 441.0,
+						"translation.y": 1360.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

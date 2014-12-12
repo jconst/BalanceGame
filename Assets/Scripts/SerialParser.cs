@@ -11,13 +11,14 @@ public class SerialParser : MonoBehaviour
     const int baudRate = 57600;
     SerialPort _serialPort;
 
-    string message;
+    string message = "";
     public List<Vector3> ballVelocity =
        new List<Vector3> {
         Vector3.zero,
         Vector3.zero,
         Vector3.zero
     };
+    public Quaternion groundRotation = Quaternion.identity;
 
     public static string GuessPortName()
     {           
@@ -45,8 +46,6 @@ public class SerialParser : MonoBehaviour
         Debug.Log(serialPortName);
         _serialPort = new SerialPort(serialPortName, baudRate);
         
-        // _serialPort.DtrEnable = true; // win32 hack to try to get DataReceived event to fire
-        // _serialPort.RtsEnable = true; 
         _serialPort.PortName = serialPortName;
         _serialPort.BaudRate = baudRate;
         
@@ -69,6 +68,7 @@ public class SerialParser : MonoBehaviour
             if (_serialPort.BytesToRead > 0) {
                 try {
                     message = _serialPort.ReadLine();
+                    _serialPort.ReadExisting();
                 } catch (Exception e) {
                      // swallow read timeout exceptions
                     if (e.GetType() == typeof(TimeoutException))
@@ -81,6 +81,7 @@ public class SerialParser : MonoBehaviour
     }
 
     void Parse() {
+        Debug.Log(message);
         if (!message.StartsWith(":"))
             return;
 
@@ -95,6 +96,11 @@ public class SerialParser : MonoBehaviour
 
             bool jumping = (stat & 1) != 0;
             ballVelocity[mouseNum] = new Vector3((float)x / 8, jumping ? 1 : 0, (float)z / 8);
+        } else if (msgType.StartsWith(":euler")) {
+            // for (int i=0; i<4; ++i) {
+            //     groundRotation[i] = float.Parse(tokens[i+1]);
+            // }
+            groundRotation = Quaternion.Euler(float.Parse(tokens[1]), float.Parse(tokens[2]), float.Parse(tokens[3]));
         }
     }
 

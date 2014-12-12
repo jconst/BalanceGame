@@ -5,9 +5,14 @@ using System.Linq;
 
 public class Manager : MonoBehaviour
 {
+    static public Manager S { get {
+        return GameObject.FindObjectOfType(typeof(Manager)) as Manager;
+    }}
+
     // -- CONSTANTS --
     const int numBalls = 3;
     const int countdownLength = 3;
+    static public int roundDuration = 20;
 
     private Dictionary<int, Color> colorOfBall =
         new Dictionary<int, Color>
@@ -24,9 +29,21 @@ public class Manager : MonoBehaviour
     public float roundStartTime;
     public GUIText countdownGUIText;
 
+    public float timePassed {
+        get {
+            return Time.time - roundStartTime;
+        }
+    }
+
+    public float roundProgress {
+        get {
+            return timePassed / (float)roundDuration;
+        }
+    }
+
     public bool countingDown {
         get {
-            return (countdownLength - (Time.time - roundStartTime)) > -1;
+            return (countdownLength - timePassed) > -1;
         }
     }
 
