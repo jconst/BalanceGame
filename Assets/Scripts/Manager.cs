@@ -14,10 +14,18 @@ public class Manager : MonoBehaviour
     const int countdownLength = 3;
     static public int roundDuration = 20;
 
+    private Dictionary<int, string> nameOfBall =
+        new Dictionary<int, string>
+    {
+        {0, "Blue Ball"},
+        {1, "Green Ball"},
+        {2, "White Ball"}
+    };
+
     private Dictionary<int, Color> colorOfBall =
         new Dictionary<int, Color>
     {
-        {0, Color.red},
+        {0, Color.blue},
         {1, Color.green},
         {2, Color.white}
     };
@@ -102,6 +110,21 @@ public class Manager : MonoBehaviour
         if (countingDown) {
             int countRemaining = countdownLength - (int)Mathf.Floor(Time.time - roundStartTime);
             countdownGUIText.text = countRemaining > 0 ? countRemaining.ToString() : "Start!";
+        } else if (roundProgress >= 1f) {
+            DetermineWinner();
         }
+    }
+
+    void DetermineWinner() {
+        List<Ball> livingBalls = balls.Where(b => !b.dead).ToList();
+        string winner = livingBalls.Count == 0 
+                      ? "Ground"
+                      : livingBalls.Select(b => nameOfBall[b.number])
+                                   .Aggregate((acc, cur) => acc + " and " + cur);
+        string suffix = livingBalls.Count > 1
+                      ? " Win!"
+                      : " Wins!";
+        Debug.Log(winner + suffix);
+        Application.LoadLevel(0);
     }
 }

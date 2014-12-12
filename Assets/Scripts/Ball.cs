@@ -39,7 +39,7 @@ public class Ball : MonoBehaviour
     }
 
     void OnBecameInvisible() {
-        dead = false;
+        dead = true;
         // Destroy(gameObject);
     }
 

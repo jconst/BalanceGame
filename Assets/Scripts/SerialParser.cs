@@ -28,7 +28,7 @@ public class SerialParser : MonoBehaviour
         {
             devices = System.IO.Directory.GetFiles("/dev/");        
         }
-        string dev = ""; ;          
+        string dev = "";
         foreach (var d in devices)
         {               
             if (d.StartsWith("/dev/tty.usb") || d.StartsWith("/dev/ttyUSB"))
@@ -59,6 +59,8 @@ public class SerialParser : MonoBehaviour
     }
 
     void FixedUpdate() {
+        if (!_serialPort.IsOpen)
+            return;
         Read();
         Parse();
     }
