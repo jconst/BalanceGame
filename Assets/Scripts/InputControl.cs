@@ -15,6 +15,9 @@ public class InputControl
         }
     }
 
+    public bool pendingBomb = false;
+    public Vector3 bombDropPosition = Vector3.zero;
+
     const int keyboardPlayer = 0;
     SerialParser serial;
     Vector3 tilt = Vector3.zero;
