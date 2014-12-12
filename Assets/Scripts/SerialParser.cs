@@ -43,11 +43,9 @@ public class SerialParser : MonoBehaviour
 
     void Start() {
         string serialPortName = GuessPortName();
-        Debug.Log(serialPortName);
+        if (serialPortName == null || serialPortName.Length == 0)
+            return;
         _serialPort = new SerialPort(serialPortName, baudRate);
-        
-        _serialPort.PortName = serialPortName;
-        _serialPort.BaudRate = baudRate;
         
         _serialPort.DataBits = 8;
         _serialPort.Parity = Parity.None;
@@ -59,7 +57,7 @@ public class SerialParser : MonoBehaviour
     }
 
     void FixedUpdate() {
-        if (!_serialPort.IsOpen)
+        if (_serialPort == null || !_serialPort.IsOpen)
             return;
         Read();
         Parse();
@@ -108,6 +106,7 @@ public class SerialParser : MonoBehaviour
 
     void OnDestroy()
     {               
-        _serialPort.Close();
+        if (_serialPort != null && _serialPort.IsOpen)
+            _serialPort.Close();
     }
 }

@@ -10,7 +10,11 @@ public class Ball : MonoBehaviour
     public int number;
     public bool frozen;
     public bool airborne = true;
-    public bool dead = false;
+    public bool dead {
+        get {
+            return transform.position.y < -0.5;
+        }
+    }
 
     void Start() {
     
@@ -36,15 +40,6 @@ public class Ball : MonoBehaviour
         rigidbody.velocity = newVelocity;
 
         airborne = true;
-    }
-
-    void OnBecameInvisible() {
-        dead = true;
-        // Destroy(gameObject);
-    }
-
-    void OnCollisionEnter(Collision coll) {
-        OnCollisionStay(coll);
     }
 
     void OnCollisionStay(Collision coll) {
