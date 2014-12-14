@@ -2,10 +2,7 @@
 using UnityEngine;
 using System.Collections;
 
-/*#if UNIDUINO_API_LEVEL_SET
 using System.IO.Ports;
-#endif
- */
 
 namespace Uniduino
 {

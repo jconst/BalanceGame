@@ -541,6 +541,7 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
   groundRotation: {x: 0, y: 0, z: 0, w: 1}
+  touchpadPosition: {x: 0, y: 0}
 --- !u!4 &2040690994
 Transform:
   m_ObjectHideFlags: 0

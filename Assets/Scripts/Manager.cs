@@ -12,7 +12,7 @@ public class Manager : MonoBehaviour
     // -- CONSTANTS --
     const int numBalls = 3;
     const int countdownLength = 3;
-    static public int roundDuration = 20;
+    static public int roundDuration = 200;
 
     private Dictionary<int, string> nameOfBall =
         new Dictionary<int, string>
@@ -36,6 +36,12 @@ public class Manager : MonoBehaviour
 
     public float roundStartTime;
     public GUIText countdownGUIText;
+
+    public List<Ball> livingBalls {
+        get {
+            return balls.Where(b => !b.dead).ToList();
+        }
+    }
 
     public float timePassed {
         get {
@@ -116,7 +122,6 @@ public class Manager : MonoBehaviour
     }
 
     void DetermineWinner() {
-        List<Ball> livingBalls = balls.Where(b => !b.dead).ToList();
         string winner = livingBalls.Count == 0 
                       ? "Ground"
                       : livingBalls.Select(b => nameOfBall[b.number])

@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"Vecto",
+				"Vector2	x, y"
+			],
+			[
+				"ser",
+				"serial"
+			],
+			[
+				"initi",
+				"initialSize"
+			],
+			[
+				"init",
+				"initialAltitude"
+			],
+			[
+				"_ser",
+				"_serialPortName"
+			],
+			[
+				"round",
+				"roundProgress"
+			],
+			[
+				"new",
+				"newSize"
+			],
+			[
+				"roun",
+				"roundDuration"
+			],
+			[
 				"Star",
 				"StartsWith"
 			],
@@ -142,10 +174,6 @@
 			[
 				"par",
 				"parentGO"
-			],
-			[
-				"new",
-				"newRoundStartTime"
 			],
 			[
 				"StartCor",
@@ -294,10 +322,6 @@
 			[
 				"Clamp",
 				"ClampMagnitude	vector, maxLength"
-			],
-			[
-				"Vecto",
-				"Vector3	x, y, z"
 			],
 			[
 				"proj",
@@ -490,30 +514,6 @@
 			[
 				"Rang",
 				"RangEffect"
-			],
-			[
-				"weapo",
-				"weaponGUISelected"
-			],
-			[
-				"inve",
-				"inventoryIndexes"
-			],
-			[
-				"Invent",
-				"InventoryScreen"
-			],
-			[
-				"fire",
-				"fireFreqVariance"
-			],
-			[
-				"Fire",
-				"FireProjectile"
-			],
-			[
-				"Le",
-				"LeftKey"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "Assets/Scripts/InputControl.cs",
 			"settings":
 			{
-				"buffer_size": 1483,
+				"buffer_size": 1808,
 				"line_ending": "Unix"
 			}
 		},
@@ -531,7 +531,7 @@
 			"file": "Assets/Scripts/Ground.cs",
 			"settings":
 			{
-				"buffer_size": 217,
+				"buffer_size": 487,
 				"line_ending": "Unix"
 			}
 		},
@@ -539,7 +539,7 @@
 			"file": "Assets/Scripts/Manager.cs",
 			"settings":
 			{
-				"buffer_size": 2406,
+				"buffer_size": 3544,
 				"line_ending": "Unix"
 			}
 		},
@@ -547,7 +547,7 @@
 			"file": "Assets/Scripts/Ball.cs",
 			"settings":
 			{
-				"buffer_size": 1215,
+				"buffer_size": 1167,
 				"line_ending": "Unix"
 			}
 		},
@@ -555,7 +555,23 @@
 			"file": "Assets/Scripts/SerialParser.cs",
 			"settings":
 			{
-				"buffer_size": 3323,
+				"buffer_size": 3452,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Bomb.cs",
+			"settings":
+			{
+				"buffer_size": 508,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/BombDropper.cs",
+			"settings":
+			{
+				"buffer_size": 523,
 				"line_ending": "Unix"
 			}
 		}
@@ -791,6 +807,8 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"_serialPortName",
+			"Color",
 			"canJump",
 			"64",
 			"Vector2",
@@ -916,9 +934,7 @@
 			"= =",
 			"    void",
 			"void",
-			"//",
-			"\" ",
-			"(\" "
+			"//"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1064,7 +1080,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -1072,15 +1088,15 @@
 					"file": "Assets/Scripts/InputControl.cs",
 					"settings":
 					{
-						"buffer_size": 1483,
+						"buffer_size": 1808,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1157,
-								1157
+								334,
+								334
 							]
 						],
 						"settings":
@@ -1093,7 +1109,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 201.0,
+						"translation.y": 252.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1103,15 +1119,15 @@
 					"file": "Assets/Scripts/Ground.cs",
 					"settings":
 					{
-						"buffer_size": 217,
+						"buffer_size": 487,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								208,
-								208
+								180,
+								226
 							]
 						],
 						"settings":
@@ -1132,15 +1148,15 @@
 					"file": "Assets/Scripts/Manager.cs",
 					"settings":
 					{
-						"buffer_size": 2406,
+						"buffer_size": 3544,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								513,
-								513
+								3535,
+								3535
 							]
 						],
 						"settings":
@@ -1153,7 +1169,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 961.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1163,15 +1179,15 @@
 					"file": "Assets/Scripts/Ball.cs",
 					"settings":
 					{
-						"buffer_size": 1215,
+						"buffer_size": 1167,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1205,
-								1205
+								1158,
+								1158
 							]
 						],
 						"settings":
@@ -1194,15 +1210,15 @@
 					"file": "Assets/Scripts/SerialParser.cs",
 					"settings":
 					{
-						"buffer_size": 3323,
+						"buffer_size": 3452,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3202,
-								3202
+								626,
+								626
 							]
 						],
 						"settings":
@@ -1215,7 +1231,67 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1360.0,
+						"translation.y": 349.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Assets/Scripts/Bomb.cs",
+					"settings":
+					{
+						"buffer_size": 508,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								18,
+								18
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "Assets/Scripts/BombDropper.cs",
+					"settings":
+					{
+						"buffer_size": 523,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								483,
+								483
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

@@ -7,7 +7,7 @@ using System.IO.Ports;
 
 public class SerialParser : MonoBehaviour
 {
-    const int maxLinesPerBatch = 64; // process no more than this many bytes per individual processInput call
+    const int maxLinesPerBatch = 16; // process no more than this many lines per individual Read() call
     const int baudRate = 57600;
     SerialPort _serialPort;
 
@@ -19,6 +19,7 @@ public class SerialParser : MonoBehaviour
         Vector3.zero
     };
     public Quaternion groundRotation = Quaternion.identity;
+    public Vector2 touchpadPosition = Vector2.zero;
 
     public static string GuessPortName()
     {           
@@ -64,20 +65,20 @@ public class SerialParser : MonoBehaviour
     }
 
     void Read() {
-        // for (int i=0; i<maxLinesPerBatch; ++i) {
-            if (_serialPort.BytesToRead > 0) {
-                try {
+        try {
+            for (int i=0; i<maxLinesPerBatch; ++i) {
+                if (_serialPort.BytesToRead > 0) {
                     message = _serialPort.ReadLine();
-                    _serialPort.ReadExisting();
-                } catch (Exception e) {
-                     // swallow read timeout exceptions
-                    if (e.GetType() == typeof(TimeoutException))
-                        return;
-                    else 
-                        throw;
                 }
             }
-        // }
+            _serialPort.ReadExisting();
+        } catch (Exception e) {
+             // swallow read timeout exceptions
+            if (e.GetType() == typeof(TimeoutException))
+                return;
+            else 
+                throw;
+        }
     }
 
     void Parse() {
@@ -97,10 +98,9 @@ public class SerialParser : MonoBehaviour
             bool jumping = (stat & 1) != 0;
             ballVelocity[mouseNum] = new Vector3((float)x / 8, jumping ? 1 : 0, (float)z / 8);
         } else if (msgType.StartsWith(":euler")) {
-            // for (int i=0; i<4; ++i) {
-            //     groundRotation[i] = float.Parse(tokens[i+1]);
-            // }
-            groundRotation = Quaternion.Euler(float.Parse(tokens[1]), float.Parse(tokens[2]), float.Parse(tokens[3]));
+            groundRotation = Quaternion.Euler(float.Parse(tokens[2]), float.Parse(tokens[1]), -float.Parse(tokens[3]));
+        } else if (msgType.StartsWith(":touch")) {
+            touchpadPosition = new Vector2(float.Parse(tokens[1]), float.Parse(tokens[2]));
         }
     }
 

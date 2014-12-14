@@ -12,7 +12,7 @@ public class Ground : MonoBehaviour
     }
 
     void Update() {
-        rigidbody.rotation = InputControl.S.Tilt();
+        transform.rotation = InputControl.S.Tilt();
 
         float newSize = initialSize * Mathf.Min((1-Manager.S.roundProgress)+0.1f, 1f);
         transform.localScale = new Vector3(newSize, transform.localScale.y, newSize);

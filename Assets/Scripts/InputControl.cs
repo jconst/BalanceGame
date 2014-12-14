@@ -15,9 +15,6 @@ public class InputControl
         }
     }
 
-    public bool pendingBomb = false;
-    public Vector3 bombDropPosition = Vector3.zero;
-
     const int keyboardPlayer = 0;
     SerialParser serial;
     Vector3 tilt = Vector3.zero;
@@ -49,5 +46,17 @@ public class InputControl
                                       -Input.GetAxisRaw("TiltRight"));
         tilt = Vector3.Lerp(tilt, newTilt, 0.2f);
         return Quaternion.Euler(tilt * 20f);;
-    } 
+    }
+
+    public bool PendingBomb() {
+        return serial.touchpadPosition.magnitude > 0.1f ||
+               Input.GetKeyDown(KeyCode.B);
+    }
+
+    public Vector3 BombDropPosition() {
+        if (Input.GetKeyDown(KeyCode.B)) {
+            return new Vector2(0.5f, 0.5f);
+        }
+        return serial.touchpadPosition;
+    }
 }

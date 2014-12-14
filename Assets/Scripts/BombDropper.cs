@@ -12,6 +12,11 @@ public class BombDropper : MonoBehaviour
     }
     
     void Update() {
-    
+        if (InputControl.S.PendingBomb()) {
+            Vector3 bombPos = InputControl.S.BombDropPosition();
+            bombPos.y = dropHeight;
+            GameObject go = Instantiate(Resources.Load("Bomb")) as GameObject;
+            go.transform.position = bombPos;
+        }
     }
 }
