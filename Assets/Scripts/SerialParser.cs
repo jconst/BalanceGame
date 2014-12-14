@@ -100,7 +100,7 @@ public class SerialParser : MonoBehaviour
         } else if (msgType.StartsWith(":euler")) {
             groundRotation = Quaternion.Euler(float.Parse(tokens[2]), float.Parse(tokens[1]), -float.Parse(tokens[3]));
         } else if (msgType.StartsWith(":touch")) {
-            touchpadPosition = new Vector2(float.Parse(tokens[1]), float.Parse(tokens[2]));
+            touchpadPosition = new Vector2(float.Parse(tokens[1])/800f, float.Parse(tokens[2])/800f);
         }
     }
 
