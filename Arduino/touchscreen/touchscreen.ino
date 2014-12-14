@@ -7,18 +7,17 @@
 #define yHigh 17
 */
 //modified to match my sparkfun connector
-#define yHigh 0
-#define xHigh 1
-#define yLow  2
-#define xLow  3
+#define yHigh 14
+#define xHigh 15
+#define yLow  16
+#define xLow  17
  
  
 void setup(){
-  Serial.begin(9600);
+  Serial.begin(57600);
 }
  
-void loop()
-{
+void loop(){
   pinMode(xLow,OUTPUT);
   pinMode(xHigh,OUTPUT);
   digitalWrite(xLow,LOW);
@@ -31,7 +30,8 @@ void loop()
   pinMode(yHigh,INPUT);
   delay(10);
  
-  int x=analogRead(yLow);
+  //xLow has analog port -14 !!
+  int x=analogRead(yLow -14);
  
   pinMode(yLow,OUTPUT);
   pinMode(yHigh,OUTPUT);
@@ -45,13 +45,13 @@ void loop()
   pinMode(xHigh,INPUT);
   delay(10);
  
-  int y=analogRead(xLow);
+  //xLow has analog port -14 !!
+  int y=analogRead(xLow - 14);
  
   Serial.print(":touch\t");
   Serial.print(x,DEC); 
   Serial.print("\t");
   Serial.println(y,DEC);
  
-  // delay(200);
+  delay(100);
 }
- 
