@@ -84,7 +84,7 @@ public class SerialParser : MonoBehaviour
     }
 
     void Parse() {
-        // Debug.Log(message);
+        Debug.Log(message);
         if (!message.StartsWith(":"))
             return;
 
