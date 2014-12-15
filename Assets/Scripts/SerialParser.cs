@@ -9,9 +9,8 @@ public class SerialParser : MonoBehaviour
 {
     const int maxLinesPerBatch = 2; // process no more than this many lines per individual Read() call
     const int baudRate = 57600;
-    SerialPort _serialPort;
+    List<SerialPort> serialPorts;
 
-    string message = "";
     public List<Vector3> ballVelocity =
        new List<Vector3> {
         Vector3.zero,
@@ -21,7 +20,7 @@ public class SerialParser : MonoBehaviour
     public Quaternion groundRotation = Quaternion.identity;
     public Vector3 touchpadPosition = Vector3.zero;
 
-    public static string GuessPortName()
+    public static List<string> GuessPortNames()
     {           
         var devices = System.IO.Ports.SerialPort.GetPortNames();
         
@@ -29,61 +28,57 @@ public class SerialParser : MonoBehaviour
         {
             devices = System.IO.Directory.GetFiles("/dev/");        
         }
-        string dev = "";
-        foreach (var d in devices)
-        {               
-            if (d.StartsWith("/dev/tty.usb") || d.StartsWith("/dev/ttyUSB"))
-            {
-                dev = d;
-                Debug.Log("Guessing that arduino is device " + dev);
-                break;
-            }
-        }       
-        return dev;
+        return devices.Where(d => d.StartsWith("/dev/tty.usb") || d.StartsWith("/dev/ttyUSB"))
+                      .ToList();
     }
 
     void Start() {
-        string serialPortName = GuessPortName();
-        if (serialPortName == null || serialPortName.Length == 0)
-            return;
-        _serialPort = new SerialPort(serialPortName, baudRate);
-        
-        _serialPort.DataBits = 8;
-        _serialPort.Parity = Parity.None;
-        _serialPort.StopBits = StopBits.One;
-        _serialPort.WriteTimeout = 1000;
-        _serialPort.ReadTimeout = 100;
+        serialPorts = GuessPortNames()
+        .Where(name => name != null && name.Length > 0)
+        .Select(name => {
+            SerialPort port = new SerialPort(name, baudRate);
+            
+            port.DataBits = 8;
+            port.Parity = Parity.None;
+            port.StopBits = StopBits.One;
+            port.WriteTimeout = 1000;
+            port.ReadTimeout = 100;
 
-        _serialPort.Open();
+            port.Open();
+            return port;
+        })
+        .ToList();
     }
 
     void FixedUpdate() {
-        if (_serialPort == null || !_serialPort.IsOpen)
-            return;
-        Read();
-        Parse();
+        serialPorts
+        .Where(port => port != null && port.IsOpen)
+        .ToList()
+        .ForEach(port => Parse(Read(port)));
     }
 
-    void Read() {
+    string Read(SerialPort port) {
+        string message = "";
         try {
             for (int i=0; i<maxLinesPerBatch; ++i) {
-                if (_serialPort.BytesToRead > 0) {
-                    message = _serialPort.ReadLine();
+                if (port.BytesToRead > 0) {
+                    message = port.ReadLine();
                 }
             }
-            if (_serialPort.BytesToRead > 0) {
-                _serialPort.ReadExisting();
+            if (port.BytesToRead > 0) {
+                port.ReadExisting();
             }
         } catch (Exception e) {
              // swallow read timeout exceptions
             if (e.GetType() == typeof(TimeoutException))
-                return;
+                return message;
             else 
                 throw;
         }
+        return message;
     }
 
-    void Parse() {
+    void Parse(string message) {
         Debug.Log(message);
         if (!message.StartsWith(":"))
             return;
@@ -107,8 +102,10 @@ public class SerialParser : MonoBehaviour
     }
 
     void OnDestroy()
-    {               
-        if (_serialPort != null && _serialPort.IsOpen)
-            _serialPort.Close();
+    {
+        serialPorts.ForEach(port => {
+            if (port != null && port.IsOpen)
+                port.Close();
+        });
     }
 }
