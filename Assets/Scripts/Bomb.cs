@@ -12,11 +12,12 @@ public class Bomb : MonoBehaviour
         initialSize = transform.localScale.x;
         initialAltitude = transform.position.y;
         transform.localScale = Vector3.zero;
+        Destroy(gameObject, 10f);
     }
     
     void Update() {
         float progress = 1f-(transform.position.y/initialAltitude);
-        float newSize = initialSize * progress;
+        float newSize = Mathf.Max(initialSize * progress, initialSize);
         transform.localScale = Vector3.one * newSize;
     }
 
