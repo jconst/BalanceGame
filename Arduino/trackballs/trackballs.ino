@@ -1,46 +1,53 @@
 #include <ps2.h>
 
 
-PS2 mouse(6, 5); //(clock, data)
+PS2 mouse[3] = {PS2(2, 3), PS2(4, 5), PS2(6, 7)}; //(clock, data)
 
 void setup()
 {
   Serial.begin(57600);
-  mouse_init();
+  Serial.println("1");
+  mouse_init(0);
+  mouse_init(1);
+  mouse_init(2);
 }
 
 void loop()
 {
   poll_mouse(0);
+  poll_mouse(1);
+  poll_mouse(2);
 }
 
 /*
  * initialize the mouse. Reset it, and place it into remote
  * mode, so we can get the encoder data on demand.
  */
-void mouse_init()
+void mouse_init(int i)
 {
-  mouse.write(0xff);  // reset
-  mouse.read();  // ack byte
-  mouse.read();  // blank */
-  mouse.read();  // blank */
-  mouse.write(0xf0);  // remote mode
-  mouse.read();  // ack
+  Serial.println("2");
+  mouse[i].write(0xff);  // reset
+  Serial.println("3");
+  mouse[i].read();  // ack byte
+  mouse[i].read();  // blank */
+  mouse[i].read();  // blank */
+  mouse[i].write(0xf0);  // remote mode
+  mouse[i].read();  // ack
   delayMicroseconds(100);
 }
 
-void poll_mouse(char mouseNum)
+void poll_mouse(int i)
 {
   /* get a reading from the mouse */
-  mouse.write(0xeb);  // give me data!
-  mouse.read();      // ignore ack
-  char mstat = mouse.read();
-  char mx = mouse.read();
-  char my = mouse.read();
+  mouse[i].write(0xeb);  // give me data!
+  mouse[i].read();      // ignore ack
+  char mstat = mouse[i].read();
+  char mx = mouse[i].read();
+  char my = mouse[i].read();
 
   /* send the data to the Mac */
   Serial.print(":m");
-  Serial.print((int)mouseNum);
+  Serial.print((int)i);
   Serial.print("\t");
   Serial.print((int)mstat);
   Serial.print("\t");

@@ -7,7 +7,7 @@ using System.IO.Ports;
 
 public class SerialParser : MonoBehaviour
 {
-    const int maxLinesPerBatch = 16; // process no more than this many lines per individual Read() call
+    const int maxLinesPerBatch = 2; // process no more than this many lines per individual Read() call
     const int baudRate = 57600;
     SerialPort _serialPort;
 
@@ -71,7 +71,9 @@ public class SerialParser : MonoBehaviour
                     message = _serialPort.ReadLine();
                 }
             }
-            _serialPort.ReadExisting();
+            if (_serialPort.BytesToRead > 0) {
+                _serialPort.ReadExisting();
+            }
         } catch (Exception e) {
              // swallow read timeout exceptions
             if (e.GetType() == typeof(TimeoutException))
