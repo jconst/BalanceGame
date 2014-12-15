@@ -12,7 +12,7 @@ public class Manager : MonoBehaviour
     // -- CONSTANTS --
     const int numBalls = 3;
     const int countdownLength = 3;
-    static public int roundDuration = 200;
+    static public int roundDuration = 30;
 
     private Dictionary<int, string> nameOfBall =
         new Dictionary<int, string>
@@ -101,15 +101,15 @@ public class Manager : MonoBehaviour
 
     public IEnumerator CountDownCoroutine()
     {
-        GameObject countdownParent = Instantiate(Resources.Load("Countdown")) as GameObject;
-        countdownGUIText = countdownParent.GetComponentInChildren<GUIText>();
+        GameObject go = Instantiate(Resources.Load("CountdownText")) as GameObject;
+        countdownGUIText = go.GetComponent<GUIText>();
 
         yield return new WaitForSeconds(countdownLength);
         balls.ForEach(b => b.frozen = false);
 
         yield return new WaitForSeconds(1);
 
-        Destroy(countdownParent);
+        countdownGUIText.text = "";
     }
 
     public void Update() {
@@ -129,7 +129,13 @@ public class Manager : MonoBehaviour
         string suffix = livingBalls.Count > 1
                       ? " Win!"
                       : " Wins!";
-        Debug.Log(winner + suffix);
-        Application.LoadLevel(0);
+        countdownGUIText.text = winner + suffix;
+        Time.timeScale = 0.1f;
+        Invoke("Reset", 0.2f);
+        Time.timeScale = 1f;
+    }
+
+    void Reset() {
+        Application.LoadLevel(Application.loadedLevel);
     }
 }

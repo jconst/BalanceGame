@@ -20,7 +20,7 @@ public class Ground : MonoBehaviour
         }
         rigidbody.angularVelocity = velEuler;
 
-        float newSize = initialSize * Mathf.Min((1-Manager.S.roundProgress)+0.1f, 1f);
+        float newSize = initialSize * Mathf.Clamp((1-Manager.S.roundProgress)+0.1f, 0.1f, 1f);
         transform.localScale = new Vector3(newSize, transform.localScale.y, newSize);
     }
 }

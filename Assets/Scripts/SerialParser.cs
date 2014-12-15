@@ -9,7 +9,8 @@ public class SerialParser : MonoBehaviour
 {
     const int maxLinesPerBatch = 2; // process no more than this many lines per individual Read() call
     const int baudRate = 57600;
-    List<SerialPort> serialPorts;
+    List<SerialPort> serialPorts = 
+    new List<SerialPort>();
 
     public List<Vector3> ballVelocity =
        new List<Vector3> {
@@ -17,7 +18,7 @@ public class SerialParser : MonoBehaviour
         Vector3.zero,
         Vector3.zero
     };
-    public Quaternion groundRotation = Quaternion.identity;
+    public Vector3 groundRotation = Vector3.zero;
     public Vector3 touchpadPosition = Vector3.zero;
 
     public static List<string> GuessPortNames()
@@ -33,6 +34,7 @@ public class SerialParser : MonoBehaviour
     }
 
     void Start() {
+        DontDestroyOnLoad(gameObject);
         serialPorts = GuessPortNames()
         .Where(name => name != null && name.Length > 0)
         .Select(name => {
@@ -95,7 +97,7 @@ public class SerialParser : MonoBehaviour
             bool jumping = (stat & 1) != 0;
             ballVelocity[mouseNum] = new Vector3((float)x / 8, jumping ? 1 : 0, (float)z / 8);
         } else if (msgType.StartsWith(":euler")) {
-            groundRotation = Quaternion.Euler(float.Parse(tokens[2]), float.Parse(tokens[1]), -float.Parse(tokens[3]));
+            groundRotation = new Vector3(float.Parse(tokens[2]), float.Parse(tokens[1]), -float.Parse(tokens[3]));
         } else if (msgType.StartsWith(":touch")) {
             touchpadPosition = new Vector3(float.Parse(tokens[2]), 0f, float.Parse(tokens[1]));
         }

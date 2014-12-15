@@ -38,8 +38,12 @@ public class InputControl
 
     public Quaternion Tilt()
     {
-        if (serial.groundRotation != Quaternion.identity) {
-            return serial.groundRotation;// * Quaternion.Euler(0,0,0);
+        if (serial.groundRotation != Vector3.zero) {
+            Vector3 euler = serial.groundRotation;
+            for (int i=0; i<3; ++i) {
+                euler[i] = Mathf.Clamp(euler[i], -20, 20);
+            }
+            return Quaternion.Euler(euler);
         }
         Vector3 newTilt = new Vector3(Input.GetAxisRaw("TiltForward"),
                                       0,
