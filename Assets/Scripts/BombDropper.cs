@@ -6,17 +6,14 @@ using System.Linq;
 public class BombDropper : MonoBehaviour
 {
     const float dropHeight = 10f;
-    float bombCooldown = 2f;
-
-    void Start() {
-    
-    }
+    float bombCooldown = 5f;
     
     void Update() {
         bombCooldown -= Time.deltaTime;
         if (InputControl.S.PendingBomb() &&
             bombCooldown < 0) {
             Vector3 bombPos = InputControl.S.BombDropPosition();
+            Debug.Log("dropping bomb");
             Debug.Log(bombPos);
             bombPos *= 1/800f;                                  //normalize
             bombPos -= (Vector3.one * 0.5f);                    //center

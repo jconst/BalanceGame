@@ -31,7 +31,7 @@ public class Manager : MonoBehaviour
     };
 
     // -- VARIABLES --
-    public GameObject ground;
+    public Ground ground;
     public List<Ball> balls;
 
     public float roundStartTime;
@@ -63,6 +63,7 @@ public class Manager : MonoBehaviour
 
     void Start()
     {
+        ground = GameObject.Find("Ground").GetComponent<Ground>();
         StartNewRound();
     }
 
@@ -95,6 +96,7 @@ public class Manager : MonoBehaviour
         balls.ForEach(b => {
             b.frozen = true;
         });
+        ground.frozen = true;
 
         StartCoroutine(CountDownCoroutine());
     }
@@ -106,6 +108,7 @@ public class Manager : MonoBehaviour
 
         yield return new WaitForSeconds(countdownLength);
         balls.ForEach(b => b.frozen = false);
+        ground.frozen = false;
 
         yield return new WaitForSeconds(1);
 

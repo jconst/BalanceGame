@@ -18,9 +18,13 @@ public class InputControl
     const int keyboardPlayer = 0;
     SerialParser serial;
     Vector3 tilt = Vector3.zero;
+    Vector3 tiltOffset = Vector3.zero;
 
     public InputControl() {
         serial = GameObject.FindObjectOfType(typeof(SerialParser)) as SerialParser;
+        tiltOffset = serial.groundRotation;
+        Debug.Log("tiltOffset");
+        Debug.Log(tiltOffset);        
     }
 
     public Vector3 RollVelocity(int playerNum)
@@ -33,7 +37,7 @@ public class InputControl
                                    0,
                                    Input.GetAxisRaw("Vertical"));
         }
-        return velocity * 12f;
+        return velocity * 5f;
     }
 
     public Quaternion Tilt()
@@ -48,12 +52,13 @@ public class InputControl
         Vector3 newTilt = new Vector3(Input.GetAxisRaw("TiltForward"),
                                       0,
                                       -Input.GetAxisRaw("TiltRight"));
+        newTilt -= tiltOffset;
         tilt = Vector3.Lerp(tilt, newTilt, 0.2f);
         return Quaternion.Euler(tilt * 20f);;
     }
 
     public bool PendingBomb() {
-        return serial.touchpadPosition.magnitude > 0.1f ||
+        return serial.touchpadPosition.magnitude > 10f ||
                Input.GetKeyDown(KeyCode.B);
     }
 

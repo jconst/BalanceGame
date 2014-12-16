@@ -81,7 +81,7 @@ public class SerialParser : MonoBehaviour
     }
 
     void Parse(string message) {
-        Debug.Log(message);
+        // Debug.Log(message);
         if (!message.StartsWith(":"))
             return;
 
@@ -97,7 +97,7 @@ public class SerialParser : MonoBehaviour
             bool jumping = (stat & 1) != 0;
             ballVelocity[mouseNum] = new Vector3((float)x / 8, jumping ? 1 : 0, (float)z / 8);
         } else if (msgType.StartsWith(":euler")) {
-            groundRotation = new Vector3(float.Parse(tokens[2]), float.Parse(tokens[1]), -float.Parse(tokens[3]));
+            groundRotation = new Vector3(-float.Parse(tokens[2]), float.Parse(tokens[1]), float.Parse(tokens[3]));
         } else if (msgType.StartsWith(":touch")) {
             touchpadPosition = new Vector3(float.Parse(tokens[2]), 0f, float.Parse(tokens[1]));
         }
