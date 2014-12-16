@@ -12,7 +12,7 @@ public class Manager : MonoBehaviour
     // -- CONSTANTS --
     const int numBalls = 3;
     const int countdownLength = 3;
-    static public int roundDuration = 20;
+    static public int roundDuration = 25;
 
     private Dictionary<int, string> nameOfBall =
         new Dictionary<int, string>
