@@ -23,9 +23,9 @@ public class Ground : MonoBehaviour
                 velEuler[i] -= 360;
             }
         }
-        rigidbody.angularVelocity = velEuler * 0.04f;
+        rigidbody.angularVelocity = velEuler * 0.07f;
 
-        float newSize = initialSize * Mathf.Clamp((1-Manager.S.roundProgress)+0.2f, 0.2f, 1f);
+        float newSize = initialSize * Mathf.Clamp((1-Manager.S.roundProgress)+0.4f, 0.4f, 1f);
         transform.localScale = new Vector3(newSize, transform.localScale.y, newSize);
     }
 }

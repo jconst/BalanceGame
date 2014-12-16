@@ -251,7 +251,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Calibrating gyroscope...
+  m_Text: 'Don''t touch P4 controller,
+
+    Calibrating gyroscope...'
 --- !u!222 &876799751
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ public class Manager : MonoBehaviour
     // -- CONSTANTS --
     const int numBalls = 3;
     const int countdownLength = 3;
-    static public int roundDuration = 25;
+    static public int roundDuration = 30;
 
     private Dictionary<int, string> nameOfBall =
         new Dictionary<int, string>
@@ -37,6 +37,7 @@ public class Manager : MonoBehaviour
 
     float roundStartTime = float.MaxValue;
     public GUIText countdownGUIText;
+    public GUIText timerGUIText;
 
     public List<Ball> livingBalls {
         get {
@@ -65,7 +66,9 @@ public class Manager : MonoBehaviour
     void Start()
     {
         ground = GameObject.Find("Ground").GetComponent<Ground>();
-        countdownGUIText = GameObject.FindObjectOfType(typeof(GUIText)) as GUIText;
+        countdownGUIText = GameObject.Find("CountdownText").GetComponent<GUIText>();
+        timerGUIText = GameObject.Find("TimerText").GetComponent<GUIText>();
+        timerGUIText.text = "";
     }
 
     void CreateBalls()
@@ -114,11 +117,14 @@ public class Manager : MonoBehaviour
     }
 
     public void Update() {
+        timerGUIText.text = "";
         if (countingDown) {
-            int countRemaining = countdownLength - (int)Mathf.Floor(Time.time - roundStartTime);
+            int countRemaining = countdownLength - (int)Mathf.Floor(timePassed);
             countdownGUIText.text = countRemaining > 0 ? countRemaining.ToString() : "Start!";
         } else if (roundProgress >= 1f) {
             DetermineWinner();
+        } else if (started) {
+            timerGUIText.text = ((int)(roundDuration - timePassed)).ToString();
         }
         if (Input.GetKeyDown(KeyCode.Space)) {
             if (started) {
@@ -139,12 +145,12 @@ public class Manager : MonoBehaviour
                       ? " Win!"
                       : " Wins!";
         countdownGUIText.text = winner + suffix;
-        Time.timeScale = 0.1f;
-        Invoke("Reset", 1f);
-        Time.timeScale = 1f;
+        Time.timeScale = 0.2f;
+        Invoke("Reset", 0.6f);
     }
 
     void Reset() {
+        Time.timeScale = 1f;
         Application.LoadLevel(Application.loadedLevel);
     }
 }
