@@ -6,13 +6,14 @@ using System.Linq;
 public class Ground : MonoBehaviour
 {
     float initialSize;
-    public bool frozen;
+    public bool frozen = true;
 
     void Start() {
         initialSize = transform.localScale.x;
     }
 
     void Update() {
+        rigidbody.isKinematic = frozen;
         if (frozen)
             return;
 

@@ -17,7 +17,7 @@ public class Bomb : MonoBehaviour
     
     void Update() {
         float progress = 1f-(transform.position.y/initialAltitude);
-        float newSize = Mathf.Max(initialSize * progress, initialSize);
+        float newSize = Mathf.Min(initialSize * progress, initialSize);
         transform.localScale = Vector3.one * newSize;
     }
 
@@ -39,8 +39,12 @@ public class Bomb : MonoBehaviour
         .Where(b => !b.airborne)
         .ToList()
         .ForEach(b => {
-            Debug.Log("here");
-            b.rigidbody.AddExplosionForce(500f, transform.position, 50f);
+            // Debug.Log("here");
+            // Vector3 dist = b.transform.position - transform.position;
+            // Vector3 force = dist.normalized * (20f/dist.magnitude);
+            // b.rigidbody.AddForce(force, ForceMode.Impulse);
+
+            b.rigidbody.AddExplosionForce(1300f, transform.position, 50f);
         });
     }
 }

@@ -12,7 +12,7 @@ public class Manager : MonoBehaviour
     // -- CONSTANTS --
     const int numBalls = 3;
     const int countdownLength = 3;
-    static public int roundDuration = 30;
+    static public int roundDuration = 20;
 
     private Dictionary<int, string> nameOfBall =
         new Dictionary<int, string>
@@ -33,8 +33,9 @@ public class Manager : MonoBehaviour
     // -- VARIABLES --
     public Ground ground;
     public List<Ball> balls;
+    bool started = false;
 
-    public float roundStartTime;
+    float roundStartTime = float.MaxValue;
     public GUIText countdownGUIText;
 
     public List<Ball> livingBalls {
@@ -57,14 +58,14 @@ public class Manager : MonoBehaviour
 
     public bool countingDown {
         get {
-            return (countdownLength - timePassed) > -1;
+            return started && (countdownLength - timePassed) > -1;
         }
     }
 
     void Start()
     {
         ground = GameObject.Find("Ground").GetComponent<Ground>();
-        StartNewRound();
+        countdownGUIText = GameObject.FindObjectOfType(typeof(GUIText)) as GUIText;
     }
 
     void CreateBalls()
@@ -73,7 +74,7 @@ public class Manager : MonoBehaviour
         balls = Enumerable.Range(0, numBalls)
                           .Select(i => {
             float rad = ((float)i)/((float)numBalls) * 2f*Mathf.PI;
-            Vector3 pos = new Vector3(Mathf.Sin(rad), 1f, Mathf.Cos(rad)) * (groundRadius-1);
+            Vector3 pos = new Vector3(Mathf.Sin(rad), 1f, Mathf.Cos(rad)) * (groundRadius-2);
             return CreateBall(pos, i);
         })
         .ToList();
@@ -103,9 +104,6 @@ public class Manager : MonoBehaviour
 
     public IEnumerator CountDownCoroutine()
     {
-        GameObject go = Instantiate(Resources.Load("CountdownText")) as GameObject;
-        countdownGUIText = go.GetComponent<GUIText>();
-
         yield return new WaitForSeconds(countdownLength);
         balls.ForEach(b => b.frozen = false);
         ground.frozen = false;
@@ -122,6 +120,14 @@ public class Manager : MonoBehaviour
         } else if (roundProgress >= 1f) {
             DetermineWinner();
         }
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            if (started) {
+                Reset();
+            } else {
+                started = true;
+                StartNewRound();
+            }
+        }
     }
 
     void DetermineWinner() {
@@ -134,7 +140,7 @@ public class Manager : MonoBehaviour
                       : " Wins!";
         countdownGUIText.text = winner + suffix;
         Time.timeScale = 0.1f;
-        Invoke("Reset", 0.2f);
+        Invoke("Reset", 1f);
         Time.timeScale = 1f;
     }
 

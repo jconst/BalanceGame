@@ -45,7 +45,7 @@ public class InputControl
         if (serial.groundRotation != Vector3.zero) {
             Vector3 euler = serial.groundRotation;
             for (int i=0; i<3; ++i) {
-                euler[i] = Mathf.Clamp(euler[i], -20, 20);
+                euler[i] = Mathf.Clamp(euler[i], -15, 15);
             }
             return Quaternion.Euler(euler);
         }
@@ -54,7 +54,7 @@ public class InputControl
                                       -Input.GetAxisRaw("TiltRight"));
         newTilt -= tiltOffset;
         tilt = Vector3.Lerp(tilt, newTilt, 0.2f);
-        return Quaternion.Euler(tilt * 20f);;
+        return Quaternion.Euler(tilt * 15f);;
     }
 
     public bool PendingBomb() {

@@ -8,7 +8,7 @@ public class Ball : MonoBehaviour
     const float jumpSpeed = 8;
 
     public int number;
-    public bool frozen;
+    public bool frozen = true;
     public bool airborne = true;
     public bool dead {
         get {
@@ -51,8 +51,8 @@ public class Ball : MonoBehaviour
             airborne = false;
     }
 
-    void OnCollisionExit(Collision coll) {
-        if (coll.gameObject.tag == "Ground")
-            airborne = true;
-    }
+    // void OnCollisionExit(Collision coll) {
+    //     if (coll.gameObject.tag == "Ground")
+    //         airborne = true;
+    // }
 }
